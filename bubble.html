@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bubble.css">
+    <title>Bubble Capture </title>
+    
+</head>
+<body>
+    
+    <div id="grandParent">
+
+     <h1>Grand Parent</h1>
+
+        <div id="parent">
+
+         <h1>Parent!!</h1>
+
+            <div id="child">
+
+                <h1>Child</h1>
+                <button id="btn">
+                    click
+                </button>
+
+
+            </div>
+        </div>
+
+       
+
+
+    </div>
+
+    <div id="bubble-explanation">
+        <h1>Bubbling in Javascript</h1>
+
+        <h4>Bubbling এর মধ্যে নিচ থেকে উপরে যায়। অর্থাৎ চাইল্ড কে ক্লিক করলে সেটা যথাক্রমে প্যারেন্ট এবং গ্র্যান্ড প্যারেন্ট পর্যন্ত এক্সিকিউট হয়।</h4>
+
+        <h2>এক্ষত্রে capture এর ডিফন্ট ভেল্যু False থাকে,
+            <br>
+            এই ভাল্যু True করে দিলে সেটা প্যারেন্ট থেকে চাইল্ড এ এক্সিকিউট হবে।
+        </h2>
+
+    </div>
+
+
+    
+
+    <script>
+
+        document.getElementById('grandParent').addEventListener('click',function(){
+            console.log("grand parent clicked");
+
+
+        })
+
+        document.getElementById('parent').addEventListener('click',function(){
+
+            console.log("parent clicked");
+
+        })
+
+        document.getElementById('child').addEventListener('click',function(){
+
+            console.log("child clicked");
+
+        })
+
+        document.getElementById('btn').addEventListener('click',function(){
+
+            console.log("button clicked");
+
+        })
+
+
+
+    </script>
+</body>
+</html>

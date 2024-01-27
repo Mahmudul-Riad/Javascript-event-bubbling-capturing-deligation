@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM special events</h1>
+    <button onclick="console.log('button click korse')">click meh</button>
+    <br>
+    <button onclick="document.body.style.backgroundColor='blue'">change color to blue</button>
+    <br>
+    <br>
+    <button onclick="document.body.style.backgroundColor='white'">undo color to default</button>
+    <button onclick="makeYellow()">change color to yellow</button>
+
+    <button id="make-purple"> purpleColor</button>
+
+    <script src="js/events.js"> </script>
+    <script>
+           function makeYellow(){
+        console.log(document.body.style.backgroundColor='yellow');
+
+    }
+
+    const purpleButton=document.getElementById('make-purple')
+    console.log('purpleButton')
+    purpleButton.onclick= function makePurple(){
+    
+     document.body.style.backgroundColor= 'purple'
+    }
+
+
+    </script>
+</body>
+
+</html>

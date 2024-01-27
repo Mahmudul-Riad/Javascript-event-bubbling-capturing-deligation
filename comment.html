@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coment adding method</title>
+</head>
+<body>
+    <h1>How to add comment into paragraph   </h1>
+
+    <div id="paragraph">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex unde eum modi ipsa, corporis odit porro nisi ab, aliquam voluptate repellendus doloribus sint, magni eius ratione at nihil obcaecati mollitia debitis alias facere. Accusantium eveniet autem maiores laborum sint, iure ipsum non architecto deleniti quia, animi officia? Tempora, voluptatibus nihil.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex unde eum modi ipsa, corporis odit porro nisi ab, aliquam voluptate repellendus doloribus sint, magni eius ratione at nihil obcaecati mollitia debitis alias facere. Accusantium eveniet autem maiores laborum sint, iure ipsum non architecto deleniti quia, animi officia? Tempora, voluptatibus nihil.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex unde eum modi ipsa, corporis odit porro nisi ab, aliquam voluptate repellendus doloribus sint, magni eius ratione at nihil obcaecati mollitia debitis alias facere. Accusantium eveniet autem maiores laborum sint, iure ipsum non architecto deleniti quia, animi officia? Tempora, voluptatibus nihil.</p>
+    </div>
+
+    <textarea name="" id="text" cols="50" rows="10"></textarea>
+    <button id="submit">submit</button>
+
+    <script>
+
+        document.getElementById('submit').addEventListener('click', function(){
+            const text2=document.getElementById('text').value;
+            // const newComment=text2;
+            console.log(text2);
+            // const p= document.createElement('p');
+            // p.innerText='text2';  
+            // document.getElementById('paragraph').appendChild('text2')
+            const p= document.createElement('p');
+            p.innerText=text2;
+            // console.log(p.innerText);
+            document.getElementById('paragraph').appendChild(p)
+            document.getElementById('text').value=''
+
+
+            
+
+
+        }
+        )
+
+    </script>
+</body>
+</html>
